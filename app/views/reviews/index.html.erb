@@ -1,0 +1,14 @@
+<h1>Reviews</h1>
+<div class="container text-center restaurants">
+  <% @reviews.each do |review| %>
+  <div class="row card">
+    <p><%= review.rating %></p>
+    <p><%= review.content %></p>
+  </div>
+  <% end %>
+  <div class="row card">
+    <ul class="list-inline">
+      <li><%= link_to "Home", restaurants_path, class: "btn btn-pink" %></li>
+    </ul>
+  </div>
+</div>

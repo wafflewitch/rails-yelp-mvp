@@ -1,0 +1,10 @@
+<div class="container text-center form-stuff">
+  <%= simple_form_for @restaurant do |f| %>
+    <%= f.input :name, input_html: { placeholder: "Waffle House" } %>
+    <%= f.input :address, input_html: { placeholder: "123 Waffle St" } %>
+    <%= f.input :phone_number, input_html: { placeholder: "205-555-1234" } %>
+    <%= f.input :rating, as: :select, collection: Restaurant::RATING, include_blank: "Select a rating" %>
+    <%= f.input :category, as: :select, collection: Restaurant::CATEGORIES, include_blank:  "Select a category" %>
+    <%= f.submit class: "btn btn-restaurant btn-pink" %>
+  <% end %>
+</div>

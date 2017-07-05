@@ -1,0 +1,16 @@
+<div class="container text-center restaurants">
+  <div class="row card">
+    <h2><%= @restaurant.name %></h2>
+    <p><%= @restaurant.address %> |&nbsp;<%= @restaurant.phone_number %></p>
+    <p><%= @restaurant.category %> |&nbsp;<%= @restaurant.rating %></p>
+  <ul class="list-inline">
+    <li><%= link_to "See Reviews", restaurant_reviews_path(@restaurant.id), class: "btn btn-pink" %></li>
+    <li><%= link_to "Write Review", new_restaurant_review_path(@restaurant.id), class: "btn btn-pink" %></li>
+  </ul>
+  <ul class="list-inline">
+    <li><%= link_to "Edit", edit_restaurant_path(@restaurant), class: "btn btn-pink" %></li>
+    <li><%= link_to "Delete", restaurant_path(@restaurant), method: :delete, class: "btn btn-pink" %></li>
+    <li><%= link_to "Home", restaurants_path, class: "btn btn-pink" %></li>
+    </ul>
+  </div>
+</div>
